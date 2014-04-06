@@ -1,6 +1,9 @@
 Localeats::Application.routes.draw do
+  post "/banks" => "banks#create"
+  get "dashboard" => "dashboard#index"
   devise_for :users
   root "home#index"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

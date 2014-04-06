@@ -7,8 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+     <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "LocalEats", root_path, class: "navbar-brand" %>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../getting-started">Getting started</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Contact", "mailto:sshanker220@gmail.com" %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+    <div class="container">
+      <%= yield %>
+    </div>
 </body>
 </html>

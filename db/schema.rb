@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140405214612) do
+ActiveRecord::Schema.define(version: 20140406004339) do
+
+  create_table "banks", force: true do |t|
+    t.integer "user_id"
+    t.string  "access_token"
+    t.string  "bank_type"
+  end
+
+  create_table "transactions", force: true do |t|
+    t.string  "foursquare_id"
+    t.string  "venue_name"
+    t.integer "user_id"
+    t.string  "amount"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

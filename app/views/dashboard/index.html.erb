@@ -1,0 +1,9 @@
+<h1>Dashboard</h1>
+
+<%= form_for Bank.new do |f| %>
+  <%= f.text_field :username %>
+<%= select :bank, :bank_type, [["Wells Fargo", "wells"]] %>
+  <%= f.password_field :password %>
+  <%= f.submit  :submit %>
+<% end %>
+
